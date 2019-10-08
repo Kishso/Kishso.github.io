@@ -1,7 +1,203 @@
 <!DOCTYPE html>
 <html>
+<title>Noodles and Company Review</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif} {background-image: url("images/FoodBackground.png")}
+.w3-bar-block .w3-bar-item {padding:20px}
+body{
+  background: url("images/FoodBackground.png") no-repeat center fixed;
+  background-size: cover;
+
+}
+</style>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left " style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button w3-pale-red">Close Menu</a>
+  <a href="LowerClass/TheLocation.html" onclick="w3_close()" target = "_blank" class="w3-bar-item w3-button w3-pale-blue">About the Location</a>
+  <a href="LowerClass/TheCompany.html" onclick="w3_close()" target = "_blank" class="w3-bar-item w3-button w3-pale-blue">About the Company</a>
+  <a href="LowerClass/Contact.html" onclick="w3_close()" target = "_blank" class="w3-bar-item w3-button w3-pale-blue">Gallery</a>
+  <a href="LowerClass/Contact.html" onclick="w3_close()" target = "_blank" class="w3-bar-item w3-button w3-pale-blue">Contact Them</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top w3-teal">
+  <div class="w3-teal w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left w3-teal" onclick="w3_open()">☰ Learn More</div>
+    <div class="w3-center w3-teal w3-button w3-padding-16" onclick="asmr_toggle()">Play Cooking ASMR
+    <audio id="ASMR" class="w3-center w3-teal">
+      <source src="CookingASMR.mp3" type ="audio/mpeg">
+        <p>Your browser does not support audio</p>
+    </audio>
+  </div>
+    <div class="w3-right w3-padding-16 w3-teal">Quick Taste</div>
+  </div>
+</div>
+
+<!-- !PAGE CONTENT! -->
+<div src="images/FoodBackground.png" class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+  <!--General Review-->
+  <h3 class="w3-center w3-purple w3-round">General Review</h3>
+  <p class="w3-center w3-white w3-round" style="margin-left: 100px;margin-right: 100px;margin-bottom:50px; padding:25px">
+    Noodles and Company in Nordeast does a good job at what they do. They are the limbo of franchise restaurants. What I mean by that is
+    that they are technically a franchise, but it doesn't feel like a typical franchise restaurant. Their menu is just a variety list of comfort foods, so there always be something for
+    every person. The average price for a dish ranges from $6 - $10, which is a decent price considering all the prep work you're paying
+    to not do yourself. The atmosphere is very family friendly, and sunlight floods into the store so it always feels warm and cozy. The
+    company rewards both their customers and employees who show loyalty. There are always pushing their rewards program, trying to promote
+    regular customers. While also attempting to provide oppurtunities for their employees, typically the longer they have worked there, the better.
+    It's a restaurant that will bring a unique experience not only with good food but with good values too.
+  </p>
+  <!--Signature Dishes-->
+  <h3 class="w3-center w3-teal w3-round" onclick=dish_toggle()>Signature Dishes</h3>
+  <a id='Dishes' style="display:none" class="w3-round w3-white w3-animate-top">
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="images/PenneRosa.png" alt="Penne Rosa" style="width:100%">
+      <h3>Penne Rosa</h3>
+      <p>Their most popular dish with a slight kick to it. Honestly can't go wrong with it. It'got all the comfort you need in one dish.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/Mac.png" alt="Man n' Cheese" style="width:100%">
+      <h3>Wisconsin Man n' Cheese</h3>
+      <p>Can't go wrong with a classic. Probably the safest bet for those who lack adventure</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/PadThai.png" alt="Pad Thai" style="width:100%">
+      <h3>Pad Thai</h3>
+      <p>First few bites are amazing. Probably one of the most filling dishes without protein.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/ZucchiniTruffle.png" alt="Zucchini Truffle" style="width:100%">
+      <h3>Zucchini Truffle Mac</h3>
+      <p>Delicious as much as it smells like acetone. Just don't snort the truffle powder.</p>
+    </div>
+  </div>
+
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="images/Pesto.png" alt="Pesto" style="width:100%">
+      <h3>Pesto Cavatappi</h3>
+      <p>If you like pesto, you will love this dish. If you don't, you will still like it, just a little less.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/Fresca.png" alt="Fresca" style="width:100%">
+      <h3>Rigatoni Fresca</h3>
+      <p>Very flavorful, and easy to please. Do not let its plain appearance fool you</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/SpicyKorean.png" alt="Spicy Korean" style="width:100%">
+      <h3>Spicy Korean Beef noodles</h3>
+      <p>If you like a kick, this is the one for you. Who knew ramen noodles didn't have to swim in broth.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/ChickenVeracruz.png" alt="Chicken Veracruz" style="width:100%">
+      <h3>Chicken Veracruz Salad</h3>
+      <p>If you're gonna order a salad, just order this one. It's refreshing as it is flavorful.</p>
+    </div>
+  </div>
+</a>
+
+  <!-- Pagination -->
+  <!--
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+-->
+
+
+  <!-- Footer -->
+  <footer class="w3-row-padding w3-padding-32 w3-round w3-white" style="margin:50px">
+    <!--
+    <div class="w3-third">
+      <h3>FOOTER</h3>
+      <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  -->
+
+    <div class="w3-third">
+      <h3>Other Blog Posts</h3>
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+          <img src="Images/RedPanda.png" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Fight Me</span><br>
+          <span>Red Pandas are amazing. Prove me wrong!</span>
+        </li>
+        <li class="w3-padding-16">
+          <img src="Images/Pikachu.png" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Make your Day just a Little Better</span><br>
+          <span>Look at this picture of Pikachu.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- About Section -->
+    <div class="w3-third">
+      <h3>Quick Opinion</h3><br>
+
+        <p>Noodles and Company is...</p>
+
+    </div>
+
+    <div class="w3-third w3-serif">
+      <h3>Popular Tags</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">Minneapolis</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">North East</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Pasta</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Family</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fast Food</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Casual</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Lunch</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Franchise</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Catering</span>
+      </p>
+    </div>
+  </footer>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+function dish_toggle() {
+  if(document.getElementById("Dishes").style.display == "none"){
+    document.getElementById("Dishes").style.display = "block"
+  }else{
+    document.getElementById("Dishes").style.display = "none"
+  }
+}
+
+function asmr_toggle(){
+  if (document.getElementById("ASMR").paused == true){
+    document.getElementById("ASMR").play();
+    document.getElementById("ASMR").loop = true
+  }else{
+    document.getElementById("ASMR").pause()
+  }
+
+}
+
+</script>
+
 </body>
 </html>

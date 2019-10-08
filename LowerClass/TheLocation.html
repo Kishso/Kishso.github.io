@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<!--JavaScript-->
+<script>
+function map_toggle() {
+  if(document.getElementById("Map").style.display == "none"){
+    document.getElementById("Map").style.display = "block"
+  }else{
+    document.getElementById("Map").style.display = "none"
+  }
+}
+
+function store_toggle() {
+  if(document.getElementById("Store").style.display == "none"){
+    document.getElementById("Store").style.display = "block"
+  }else{
+    document.getElementById("Store").style.display = "none"
+  }
+}
+
+function people_toggle() {
+  if(document.getElementById("People").style.display == "none"){
+    document.getElementById("People").style.display = "block"
+  }else{
+    document.getElementById("People").style.display = "none"
+  }
+}
+</script>
+<!--CSS-->
+<style>
+body{
+  background: url("../images/LocationBackground.png") center fixed no-repeat;
+  background-size: cover;
+}
+</style>
+
+<title>Noodles and Company Review</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+</style>
+<body>
+  <!--Top Bar-->
+  <div class="w3-top w3-teal">
+    <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+      <div class="w3-center w3-padding-16 w3-teal">The Location</div>
+    </div>
+  </div>
+  <!--Page Content-->
+  <div class="w3-main w3-padding-24" style="margin-top:100px;width:100%">
+    <!--The Store Itself-->
+    <div>
+      <h4 class="w3-padding-20 w3-center w3-purple" onclick=store_toggle()>The Store Itself</h4>
+      <p id="Store" class="w3-center w3-purple w3-round w3-animate-bottom" style="display:none ;margin-left: 100px;margin-right: 100px;margin-bottom:50px; padding:25px">
+        The Store sits on the corner of Hennepin and University. The store is also an intersection for alot of bus routes. Some of which
+        are the 6, 2, 10, and 61. The surrounding area is just the right amount of traffic, it's not super busy
+        but it isn't a ghost town. The surrounding neighborhoods compose
+        of alot of apartments with a younger crowd. It's not far from the Mississipii river and the area
+        is quite green with plants and fauna. The store also isn't far from the historic district, so there is plenty
+        oppurtunity for a walk after lunch.
+      </br></br>
+        The inside of the has a big lobby that stretches
+        along the long storefront of windows. Thus, alot of sunlight pours into the store during the morning
+        and makes the yellow walls shine. It creates a more warm, cozy atmosphere. Although during the night,
+        the red carpet and green trim pops out more and creates a nice dinner atmosphere. There is always a mixture of old to semi-newish pop music playing just quiet
+        enough to ignore it, but loud enough to fill in any unwanted silence.
+      </p>
+    </div>
+    <!--The People-->
+    <div>
+      <h4 class="w3-padding-20 w3-center w3-pink" onclick=people_toggle()>The People</h4>
+      <p id="People" class="w3-center w3-pink w3-round w3-animate-bottom" style="display:none;margin-left: 100px;margin-right: 100px;margin-bottom:50px; padding:25px">
+          People can always make or break the dining experience. The customer base consists alot of the cosmetology
+          students who attend Avedia right around the corner, alot of the people who live in the nearby apartments, and
+          a staple of any wholesome restaurant, families. The employees themselves are a mix of people ranging from highschoolers
+          to mid 30's and from multiple diffrent cultural backgrounds. Despite all their diffrences though,
+          they are all able to bond on the same maturtiy level regardless. People there are energetic as they are
+          easy-going.
+      </p>
+    </div>
+    <!--Google Maps-->
+    <span style='width:100%' class="w3-center w3-blue">
+      <h4 class="w3-padding-20 w3-center w3-blue" style="margin-top:0px" onclick=map_toggle()>Google Maps</h4>
+      <a class="w3-center" style ="width:100%" href="https://www.google.com/maps/place/Noodles+and+Company/@44.9895378,-93.2607457,15.09z/data=!4m5!3m4!1s0x52b32d793c437cd1:0xb8bf4fa56130af4a!8m2!3d44.9879233!4d-93.2559979" target="_blank">
+        <img src="../images/GoogleMap.png" style="width:100%;display:none" class="w3-center w3-padding-24 w3-blue w3-round w3-animate-bottom" id="Map">
+      </a>
+    </span>
+</div>
+</body>
+</html>
